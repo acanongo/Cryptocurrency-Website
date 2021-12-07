@@ -6,7 +6,7 @@ services:
        - .:/code
 
     links:
-      -redis:redis
+      - redis:redis
     ports:
        - 8000:8000
     command: python /code/realTimeChatCrypto/manage.py runserver 0.0.0.0:8000
@@ -14,4 +14,4 @@ services:
   redis:
     image: redis:latest
     expose:
-      -6379
+      - 6379
